@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SSL VPN</string>
+    <string name="connect">Connect</string>
+    <string name="disconnect">Disconnect</string>
+    <string name="server_ip">Server IP / Host</string>
+    <string name="server_port">Port (e.g. 8443)</string>
+    <string name="status_disconnected">Status: Disconnected</string>
+    <string name="status_connecting">Status: Connecting...</string>
+    <string name="status_connected">Status: Connected to %1$s:%2$d</string>
+    <string name="vpn_notification_title">SSL VPN Active</string>
+    <string name="vpn_notification_text">Your traffic is protected via SSL tunnel</string>
+    <string name="error_empty_fields">Please enter server IP and port</string>
+    <string name="error_connection">Connection failed: %1$s</string>
+</resources>
