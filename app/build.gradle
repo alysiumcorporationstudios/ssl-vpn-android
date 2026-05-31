@@ -1,0 +1,37 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.example.sslvpn'
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "com.example.sslvpn"
+        minSdk 24
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+
+        // For AIDE/Gradle 8.14.5 compatibility
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+}
+
+dependencies {
+    // Minimal dependencies - only AppCompat for modern UI compatibility (1.6.1 is stable, no known issues with API 33)
+    // Avoids any outdated libs; no third-party VPN libs as per "not OpenVPN" and custom SSL request
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+}
